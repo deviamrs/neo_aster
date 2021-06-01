@@ -63,10 +63,29 @@
 
 
                 </div>
+                 
+                @isset($asteroidArray)
+                <div class="row">
+                    <div class="col-md-4">
+                         <h6>Maximum Speed Of An Ateroid</h6>
+                         <p>{{ $maxSpeed }} Km/h</p>
+                    </div>
+                    <div class="col-md-4">
+                         <h6>Average Size Of An Ateroid</h6>
+                         <p>{{ $averageSize }} Km</p>
+                    </div>
 
+                    <div class="col-md-4">
+                         <h6>Closest Distance Fron Earth Of An Ateroid</h6>
+                         <p>{{ $missDistance}} Km</p>
+                    </div>
+                </div>
+                @endisset
+                
+                
 
                 <hr>
-
+      
 
                 @isset($asteroidArray)
                 @if ($asteroidArray->count() > 0 )
